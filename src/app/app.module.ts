@@ -14,6 +14,9 @@ import { ServicosComponent } from './servicos/servicos.component';
 import { ContactosComponent } from './contactos/contactos.component';
 import { HomeComponent } from './home/home.component';
 import {FormsModule} from '@angular/forms';
+import { MissaoComponent } from './missao/missao.component';
+import { ValoresComponent } from './valores/valores.component';
+import { EquipaComponent } from './equipa/equipa.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import {FormsModule} from '@angular/forms';
     OQueFazerComponent,
     ServicosComponent,
     ContactosComponent,
-    HomeComponent
+    HomeComponent,
+    MissaoComponent,
+    ValoresComponent,
+    EquipaComponent
   ],
   imports: [
     BrowserModule,
