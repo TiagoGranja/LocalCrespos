@@ -1,1 +1,59 @@
-<p>contactos works!</p>
+<section class="mb-4">
+  <!--Section heading-->
+  <h2 class="h1-responsive font-weight-bold text-center my-4">Contacte-nos!</h2>
+  <!--Section description-->
+  <p class="text-center w-responsive mx-auto mb-5">
+    As suas questões e comentários são bem-vindos pela equipa do Local Crespos. Por favor
+    preencha o formulário abaixo e deixe-nos a sua mensagem.
+  </p>
+</section>
+<div class="container">
+  <form (ngSubmit)="processForm()">
+    <!-- nome -->
+    <div class="field">
+      <input type="text" name="name" class="input" placeholder="Nome" [(ngModel)]="name" required minlength="3"
+        #nameInput="ngModel"/>
+
+      <div class="help is-error" *ngIf="nameInput.invalid && nameInput.dirty">
+        Campo obrigatório e deve ter pelo menos oito caracteres.
+      </div>
+    </div>
+
+    <!-- email -->
+    <div class="field">
+      <input type="email" name="email" class="input" placeholder="E-mail" [(ngModel)]="email" required email
+        #emailInput="ngModel"
+        />
+      <div class="help is-error" *ngIf="emailInput.invalid && emailInput.dirty">
+        Tem de colocar um e-mail válido: exemplo@gmail.com
+      </div>
+    </div>
+
+    <!-- assunto -->
+    <div class="field">
+      <input type="text" name="subject" class="input" placeholder="Assunto" [(ngModel)]="subject" required minlength="3"
+        #subjectInput="ngModel"/>
+
+      <div class="help is-error" *ngIf="subjectInput.invalid && subjectInput.dirty">
+        Campo obrigatório e deve ter pelo menos oito caracteres.
+      </div>
+    </div>
+
+    <!-- mensagem -->
+    <div class="field">
+      <textarea class="textarea" name="message" placeholder="Escreva a sua mensagem" [(ngModel)]="message" required
+        #messageInput="ngModel"></textarea>
+
+      <div class="help is-error" *ngIf="emailInput.invalid && emailInput.dirty">
+        É necessário escrever uma mensagem!
+      </div>
+    </div>
+    <!-- botão enviar-->
+      <div class="form-actions">
+        <button type="submit" class="button is-danger is-large submit btn">Enviar</button>
+      </div>
+
+  </form>
+</div>
+
+
