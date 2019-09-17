@@ -2,7 +2,7 @@
   <!--Section heading-->
   <h2 class="h1-responsive font-weight-bold text-center my-4">Contacte-nos!</h2>
   <!--Section description-->
-  <p class="text-center w-responsive mx-auto mb-5">
+  <p class="text-center w-responsive mx-auto">
     As suas questões e comentários são bem-vindos pela equipa do Local Crespos. Por favor
     preencha o formulário abaixo e deixe-nos a sua mensagem.
   </p>
@@ -12,9 +12,7 @@
 
     <!-- nome -->
     <div class="field">
-      <input type="text" name="name" class="input" placeholder="Nome" [(ngModel)]="name" required minlength="3"
-        #nameInput="ngModel"/>
-
+      <input type="text" name="name" class="input" placeholder="Nome" [(ngModel)]="name" required minlength="8" #nameInput="ngModel"/>
       <div class="help is-error" *ngIf="nameInput.invalid && nameInput.dirty">
         Campo obrigatório e deve ter pelo menos oito caracteres.
       </div>
@@ -22,9 +20,7 @@
 
     <!-- email -->
     <div class="field">
-      <input type="email" name="email" class="input" placeholder="E-mail" [(ngModel)]="email" required email
-        #emailInput="ngModel"
-        />
+      <input type="email" name="email" class="input" placeholder="E-mail" [(ngModel)]="email" required email #emailInput="ngModel"/>
       <div class="help is-error" *ngIf="emailInput.invalid && emailInput.dirty">
         Tem de colocar um e-mail válido: exemplo@gmail.com
       </div>
@@ -32,9 +28,7 @@
 
     <!-- assunto -->
     <div class="field">
-      <input type="text" name="subject" class="input" placeholder="Assunto" [(ngModel)]="subject" required minlength="3"
-        #subjectInput="ngModel"/>
-
+      <input type="text" name="subject" class="input" placeholder="Assunto" [(ngModel)]="subject" required minlength="8" #subjectInput="ngModel"/>
       <div class="help is-error" *ngIf="subjectInput.invalid && subjectInput.dirty">
         Campo obrigatório e deve ter pelo menos oito caracteres.
       </div>
@@ -42,20 +36,20 @@
 
     <!-- mensagem -->
     <div class="field">
-      <textarea class="textarea" name="message" placeholder="Escreva a sua mensagem" [(ngModel)]="message" required
-        #messageInput="ngModel"></textarea>
-
-      <div class="help is-error" *ngIf="emailInput.invalid && emailInput.dirty">
+      <textarea class="textarea" name="message" placeholder="Escreva a sua mensagem" [(ngModel)]="message" required #messageInput="ngModel"></textarea>
+      <div class="help is-error" *ngIf="messageInput.invalid && messageInput.dirty">
         É necessário escrever uma mensagem!
       </div>
     </div>
-    <!-- botão enviar-->
-      <div class="form-actions">
-        <button type="submit" class="button is-danger is-large submit btn">Enviar</button>
-      </div>
 
+    <!-- botão enviar-->
+  <div class="form-actions">
+      <button type="submit" class="button is-danger is-large submit btn">Enviar</button>
+    </div>
   </form>
 </div>
+
+
 
 <div class="card-deck">
   <div class="card">
