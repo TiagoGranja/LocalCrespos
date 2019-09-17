@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {FormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
+
 import { MenuInicialComponent } from './menu-inicial/menu-inicial.component';
 import { CarrocelComponent } from './carrocel/carrocel.component';
 import { ReservasComponent } from './reservas/reservas.component';
@@ -13,7 +15,6 @@ import { OQueFazerComponent } from './o-que-fazer/o-que-fazer.component';
 import { ServicosComponent } from './servicos/servicos.component';
 import { ContactosComponent } from './contactos/contactos.component';
 import { HomeComponent } from './home/home.component';
-import {FormsModule} from '@angular/forms';
 import { MissaoComponent } from './missao/missao.component';
 import { ValoresComponent } from './valores/valores.component';
 import { EquipaComponent } from './equipa/equipa.component';
@@ -38,6 +39,7 @@ import { EquipaComponent } from './equipa/equipa.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule
   ],
   providers: [],
