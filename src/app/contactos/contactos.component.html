@@ -9,6 +9,7 @@
 </section>
 <div class="container">
   <form (ngSubmit)="processForm()">
+
     <!-- nome -->
     <div class="field">
       <input type="text" name="name" class="input" placeholder="Nome" [(ngModel)]="name" required minlength="3"
@@ -56,4 +57,26 @@
   </form>
 </div>
 
-
+<div class="card-deck">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title"><i class="fas fa-map-marker-alt"></i></h5>
+      <p class="card-text"> Rua da Ribeira, nº 668, Crespos 4710-646 Braga</p>
+      <!--<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title"><i class="fas fa-phone-alt"></i></h5>
+      <p class="card-text">(+351) 968700518</p>
+      <!--<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title"><i class="far fa-envelope"></i></h5>
+      <p class="card-text">local.crespos@gmail.com</p>
+      <!--<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+    </div>
+  </div>
+</div>
