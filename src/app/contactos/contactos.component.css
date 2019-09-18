@@ -5,7 +5,7 @@
   border-radius: 14px;
   box-sizing: border-box;
   margin-top: 6px;
-  margin-bottom: 16px;
+  margin-bottom: 6px;
 }
 
 .button[type=submit] {
@@ -23,21 +23,44 @@
 
 .container {
   border-radius: 5px;
+  padding-bottom: 0px;
 }
 
 .form-actions {
-  margin-bottom: 20px;
+  margin: 20px;
   text-align: center;
 }
 
-.help{
+.help.is-error {
   color: red;
 }
 
-.ng-invalid.ng-dirty{
-  border-color: red;
+input.ng-invalid.ng-dirty {
+  background-color: rgba(255, 0, 0, 0.733);
+}
+input.ng-valid {
+  background-color: lightgreen;
 }
 
-.ng-valid{
-  border-color:cyan;
+textarea.ng-invalid.ng-dirty {
+  background-color: rgba(255, 0, 0, 0.733);
+}
+
+textarea.ng-valid {
+  background-color: lightgreen;
+}
+
+.textarea:focus, input[type="text"]:focus, input[type="email"]:focus, input[type="color"]:focus, .uneditable-input:focus {
+  border-color: gray;
+  box-shadow: none;
+  outline: 0 none;}
+
+/* outros contactos */
+
+.card-title, .card-text{
+  text-align: center;
+}
+.card {
+  border: 1px solid #ccc;
+  border-radius: 14px;
 }
