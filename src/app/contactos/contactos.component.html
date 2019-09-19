@@ -12,15 +12,15 @@
 
     <!-- nome -->
     <div class="field">
-      <input type="text" name="name" class="input" placeholder="Nome" [(ngModel)]="name" required minlength="8" #nameInput="ngModel"/>
+      <input type="text" name="name" autocomplete="off" class="input" placeholder="Nome" [(ngModel)]="name" required minlength="5" #nameInput="ngModel"/>
       <div class="help is-error" *ngIf="nameInput.invalid && nameInput.dirty">
-        Campo obrigatório e deve ter pelo menos oito caracteres.
+        Campo obrigatório e deve ter pelo menos cinco caracteres.
       </div>
     </div>
 
     <!-- email -->
     <div class="field">
-      <input type="email" name="email" class="input" placeholder="E-mail" [(ngModel)]="email" required email #emailInput="ngModel"/>
+      <input type="email" name="email" autocomplete="off" class="input" placeholder="E-mail" [(ngModel)]="email" required email #emailInput="ngModel"/>
       <div class="help is-error" *ngIf="emailInput.invalid && emailInput.dirty">
         Tem de colocar um e-mail válido: exemplo@gmail.com
       </div>
@@ -28,9 +28,9 @@
 
     <!-- assunto -->
     <div class="field">
-      <input type="text" name="subject" class="input" placeholder="Assunto" [(ngModel)]="subject" required minlength="8" #subjectInput="ngModel"/>
+      <input type="text" name="subject" autocomplete="off" class="input" placeholder="Assunto" [(ngModel)]="subject" required minlength="5" #subjectInput="ngModel"/>
       <div class="help is-error" *ngIf="subjectInput.invalid && subjectInput.dirty">
-        Campo obrigatório e deve ter pelo menos oito caracteres.
+        Campo obrigatório e deve ter pelo menos cinco caracteres.
       </div>
     </div>
 
