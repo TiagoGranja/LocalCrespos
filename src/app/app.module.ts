@@ -18,6 +18,7 @@ import { HomeComponent } from './home/home.component';
 import { MissaoComponent } from './missao/missao.component';
 import { ValoresComponent } from './valores/valores.component';
 import { EquipaComponent } from './equipa/equipa.component';
+import { TempoComponent } from './tempo/tempo.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { EquipaComponent } from './equipa/equipa.component';
     HomeComponent,
     MissaoComponent,
     ValoresComponent,
-    EquipaComponent
+    EquipaComponent,
+    TempoComponent
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { MissaoComponent } from './missao/missao.component';
 import { ValoresComponent } from './valores/valores.component';
 import { EquipaComponent } from './equipa/equipa.component';
+import { TempoComponent } from './tempo/tempo.component';
 
 
 const routes: Routes = [
@@ -29,6 +30,7 @@ const routes: Routes = [
  {path: 'oQueFazer', component: OQueFazerComponent},
  {path: 'servicos', component: ServicosComponent},
  {path: 'contactos', component: ContactosComponent},
+ {path: 'tempo', component: TempoComponent},
  {path: '**', redirectTo: 'home', pathMatch: 'full'}//tem que vir no final
 ];
 

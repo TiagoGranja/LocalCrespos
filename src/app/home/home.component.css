@@ -13,3 +13,17 @@
   position:absolute;
   }
 
+  /*--- Área dos Contactos ---*/
+  .card-text{
+    text-align: center;
+  }
+  .card-title{
+    text-align: center;
+  }
+
+  /*--- Área do botão reservar ---*/
+
+  .btn{
+    background-color: #f8f9fa;
+
+  }

@@ -1,5 +1,5 @@
 
-
+<!-- HOME -->
 
 <!--Área do Botão Reservar-->
 
@@ -33,13 +33,29 @@
 
 <!-- Área do Mapa-->
 
-
+<div class="container-fluid">
   <div class="row justify-content-center">
 
-    <app-mapa></app-mapa>
+      <div id="map-container-google-1" class="z-depth-1-half map-container" style="max-height: 50px; width: 100%">
+        <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=41.613123%2C-8.3548788&key=AIzaSyDxYF4hUKTTAHg87YzJ6aFLuTQM9y3bxCM" allowfullscreen></iframe>
+      </div>
 
   </div>
+</div>
 
+<br>
+
+<!--Área da API de meteriologia-->
+
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-auto">
+
+        <app-tempo></app-tempo>
+
+    </div>
+  </div>
+</div>
 
 <br>
 <!--Área dos Contactos (tipo bootstrap: Card decks)-->
@@ -48,7 +64,7 @@
 <div class="card-deck">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title justify-content-center"><i class="fas fa-map-marker-alt"></i></h5>
+        <h5 class="card-title"><i class="fas fa-map-marker-alt"></i></h5>
         <p class="card-text"> Rua da Ribeira, nº 668, Crespos 4710-646 Braga</p>
         <!--<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
       </div>
@@ -70,9 +86,8 @@
   </div>
 </div>
 
-<!--Área da API de meteriologia-->
-
-
+<br>
+<br>
 
 <!--Área dos testemunhos-->
 
