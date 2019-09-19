@@ -7,9 +7,6 @@ import { OQueFazerComponent } from './o-que-fazer/o-que-fazer.component';
 import { ServicosComponent } from './servicos/servicos.component';
 import { ContactosComponent } from './contactos/contactos.component';
 import { HomeComponent } from './home/home.component';
-import { MissaoComponent } from './missao/missao.component';
-import { ValoresComponent } from './valores/valores.component';
-import { EquipaComponent } from './equipa/equipa.component';
 import { TempoComponent } from './tempo/tempo.component';
 
 
