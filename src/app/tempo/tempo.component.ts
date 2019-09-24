@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpTempoService } from '../http-tempo.service';
+import { TempoService } from '../http-tempo.service';
 
 @Component({
   selector: 'app-tempo',
@@ -7,22 +7,36 @@ import { HttpTempoService } from '../http-tempo.service';
   styleUrls: ['./tempo.component.css']
 })
 export class TempoComponent implements OnInit {
+temp: string;
+stateweather: string;
+firstPartLink = 'http://openweathermap.org/img/wn/';
+secondPart: string //codigo do icon
+lastPart = '@2x.png';
 
-  piada: string;
+srcImg: string;
+//http://openweathermap.org/img/wn/10d@2x.png
+myWeatherPath: TempoService;
 
-  jokeServiceCaminho: HttpTempoService;
+  constructor(myWeather: TempoService) {
+    this.myWeatherPath = myWeather;
 
-  constructor(jokeService: HttpTempoService) {
-    this.jokeServiceCaminho = jokeService;
+  }
+
+  ngOnInit() {
+    this.lerTempo();
   }
 
 
-  ngOnInit() {}
-
-  lerPiada(){
-    this.jokeServiceCaminho.executarPedidoGet().subscribe(
-      data => {this.piada = data[this.jokeServiceCaminho.getJokeParam]}// ver no postman que a data é um array
-    )
-  }
-
+lerTempo() {
+  //this.weatherService.city = 'Barcelos';
+  this.myWeatherPath.baseask().subscribe(
+    data => {
+      console.log(data);
+      this.temp = data ['main']['temp'];
+      this.stateweather = data ['weather'][0]['description'];
+      this.secondPart = data ['weather'][0]['icon'];
+      this.srcImg = this.firstPartLink + this.secondPart + this.lastPart;
+    }
+  );
+}
 }
