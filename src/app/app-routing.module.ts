@@ -11,6 +11,10 @@ import { TempoComponent } from './tempo/tempo.component';
 import { MissaoComponent } from './missao/missao.component';
 import { ValoresComponent } from './valores/valores.component';
 import { EquipaComponent } from './equipa/equipa.component';
+import { FooterComponent } from './footer/footer.component';
+import { PoliticaComponent } from './footer/politica/politica.component';
+import { PerguntasComponent } from './footer/perguntas/perguntas.component';
+import { TermosComponent } from './footer/termos/termos.component';
 
 const routes: Routes = [
  {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -29,6 +33,11 @@ const routes: Routes = [
  {path: 'servicos', component: ServicosComponent},
  {path: 'contactos', component: ContactosComponent},
  {path: 'tempo', component: TempoComponent},
+ {path: 'footer', component: FooterComponent},
+ {path: 'politica', component: PoliticaComponent},
+ {path: 'perguntas', component: PerguntasComponent},
+ {path: 'termos', component: TermosComponent},
+
  {path: '**', redirectTo: 'home', pathMatch: 'full'}//tem que vir no final
 ];
 

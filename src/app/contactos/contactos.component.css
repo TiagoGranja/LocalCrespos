@@ -52,12 +52,10 @@
   outline: none;
 }
 
-/* outros contactos */
-
-.card-title, .card-text{
+ /*--- Área dos Contactos ---*/
+ .card-text{
   text-align: center;
 }
-.card {
-  border: 1px solid #ccc;
-  border-radius: 14px;
+.card-title{
+  text-align: center;
 }

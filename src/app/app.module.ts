@@ -19,6 +19,10 @@ import { MissaoComponent } from './missao/missao.component';
 import { ValoresComponent } from './valores/valores.component';
 import { EquipaComponent } from './equipa/equipa.component';
 import { TempoComponent } from './tempo/tempo.component';
+import { FooterComponent } from './footer/footer.component';
+import { PerguntasComponent } from './footer/perguntas/perguntas.component';
+import { TermosComponent } from './footer/termos/termos.component';
+import { PoliticaComponent } from './footer/politica/politica.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +40,11 @@ import { TempoComponent } from './tempo/tempo.component';
     MissaoComponent,
     ValoresComponent,
     EquipaComponent,
-    TempoComponent
+    TempoComponent,
+    FooterComponent,
+    PerguntasComponent,
+    TermosComponent,
+    PoliticaComponent
   ],
   imports: [
     BrowserModule,
