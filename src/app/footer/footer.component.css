@@ -1,0 +1,57 @@
+.page-footer{
+  background:gray;
+}
+
+/*formatação dos ícones redes sociais*/
+.fa {
+  padding: 20px;
+  font-size: 20px;
+  width: 60px;
+  text-decoration: none;
+  margin: 10px 10px;
+  text-align: center;
+  border-radius: 50%;
+  background: black;
+  color: white;
+}
+
+.fa:hover.icon-social-facebook{
+  background: #3B5998;
+  color: white;
+}
+
+.fa:hover.icon-social-twitter{
+  background: #55ACEE;
+  color: white;
+}
+
+.fa:hover.icon-social-instagram{
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  color: white;
+}
+
+/*hyperlink final da página*/
+a:link {
+  text-decoration: none;
+  color:black;
+  font-weight: bold;
+}
+
+/*icones payment*/
+.fab{
+  font-size: 24px;
+  margin: 5px 5px;
+}
+
+/* estilos termos, perguntas, politica */
+.bto{
+  font-size: 17px;
+}
+a {
+  color:black;
+}
+
+a:hover {
+    color: lightgrey;
+}
+
