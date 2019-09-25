@@ -4,11 +4,11 @@
 
 /*formatação dos ícones redes sociais*/
 .fa {
-  padding: 20px;
-  font-size: 20px;
-  width: 60px;
+  padding: 10px;
+  font-size: 10px;
+  width: 30px;
   text-decoration: none;
-  margin: 10px 10px;
+  margin: 5px 5px;
   text-align: center;
   border-radius: 50%;
   background: black;
@@ -45,13 +45,12 @@ a:link {
 
 /* estilos termos, perguntas, politica */
 .bto{
-  font-size: 17px;
+  font-size: 12px;
 }
 a {
   color:black;
 }
 
 a:hover {
-    color: lightgrey;
+    color: darkgrey;
 }
-

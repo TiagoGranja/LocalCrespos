@@ -2,3 +2,9 @@
   border-radius: 5px;
   padding-bottom: 0px;
 }
+
+.btn {
+  text-decoration: none;
+  color:black;
+  font-weight: bold;
+}
