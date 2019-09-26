@@ -1,4 +1,7 @@
 .margem{
   margin-left: 40px
 }
-
+.navbar{
+  background-color: gray;
+  color: white;
+}
