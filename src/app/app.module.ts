@@ -9,7 +9,6 @@ import { MenuInicialComponent } from './menu-inicial/menu-inicial.component';
 import { CarrocelComponent } from './carrocel/carrocel.component';
 import { ReservasComponent } from './reservas/reservas.component';
 import { MapaComponent } from './mapa/mapa.component';
-import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 import { OQueVisitarComponent } from './o-que-visitar/o-que-visitar.component';
 import { OQueFazerComponent } from './o-que-fazer/o-que-fazer.component';
 import { ServicosComponent } from './servicos/servicos.component';
@@ -31,7 +30,6 @@ import { PoliticaComponent } from './footer/politica/politica.component';
     CarrocelComponent,
     ReservasComponent,
     MapaComponent,
-    QuemSomosComponent,
     OQueVisitarComponent,
     OQueFazerComponent,
     ServicosComponent,

@@ -6,7 +6,7 @@
 
 <!--Navbar-->
 <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
-  <a class="navbar-brand" href="#"><img src="..\assets\Local_Crespos.png" class="img-responsive" alt="Logo"></a>
+  <a class="navbar-brand" href="#"routerLink='home' routerLinkActive="active current"><img src="..\assets\Local_Crespos.png" class="img-responsive" alt="Logo"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -15,9 +15,16 @@
         <li class="nav-item active">
           <a class="nav-link" href="#"routerLink='home' routerLinkActive="active current">Home <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" routerLink='quemSomos' routerLinkActive="active current">Quem Somos</a>
-        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Quem Somos
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#" routerLink='missao' routerLinkActive="active current">Missão</a>
+              <a class="dropdown-item" href="#" routerLink='valores' routerLinkActive="active current">Valores</a>
+              <a class="dropdown-item" href="#" routerLink='equipa' routerLinkActive="active current">Equipa</a>
+            </div>
+         </li>
         <li class="nav-item">
           <a class="nav-link" href="#" routerLink='oQueVisitar' routerLinkActive="active current">O que visitar</a>
         </li>
