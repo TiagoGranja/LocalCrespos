@@ -22,6 +22,7 @@ import { FooterComponent } from './footer/footer.component';
 import { PerguntasComponent } from './footer/perguntas/perguntas.component';
 import { TermosComponent } from './footer/termos/termos.component';
 import { PoliticaComponent } from './footer/politica/politica.component';
+import { NgxScrollTopModule } from 'ngx-scrolltop';
 
 @NgModule({
   declarations: [
@@ -48,9 +49,11 @@ import { PoliticaComponent } from './footer/politica/politica.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgxScrollTopModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
