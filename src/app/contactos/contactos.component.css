@@ -23,6 +23,12 @@
   background-color: black;
 }
 
+.button:focus {
+  border-color: none;
+  box-shadow: none;
+  outline: none;
+}
+
 .container {
   border-radius: 5px;
   padding-bottom: 0px;

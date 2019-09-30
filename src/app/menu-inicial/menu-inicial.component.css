@@ -1,12 +1,17 @@
-.jumbotron{
-  margin-bottom: 0;
-  background-color: gray;
-}
+.jumbotron {
+    min-height: 220px;
+    background-image: url('src/assets/natureza3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 0%;
+    filter: grayscale(0%);
+   }
 
 .margem{
   margin-left: 40px
 }
-
+/*dropdow*/
 .dropdown:hover>.dropdown-menu {
   display: block;
 }
@@ -16,6 +21,7 @@
   display:none;
 }
 
+/*cores da dropdown*/
 .dropdown-item:hover{
   background-color: lightgrey;
 }
