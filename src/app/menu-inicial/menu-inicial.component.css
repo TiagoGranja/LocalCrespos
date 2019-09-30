@@ -10,3 +10,15 @@
 .dropdown:hover>.dropdown-menu {
   display: block;
 }
+
+/* eliminar seta da dropdown*/
+.dropdown-toggle::after {
+  display:none;
+}
+
+.dropdown-item:hover{
+  background-color: lightgrey;
+}
+.dropdown-item.active{
+  background-color: gray;
+}
