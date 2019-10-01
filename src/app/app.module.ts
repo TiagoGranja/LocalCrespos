@@ -23,6 +23,9 @@ import { PerguntasComponent } from './footer/perguntas/perguntas.component';
 import { TermosComponent } from './footer/termos/termos.component';
 import { PoliticaComponent } from './footer/politica/politica.component';
 import { NgxScrollTopModule } from 'ngx-scrolltop';
+import { ListaQuartosComponent } from './reservas/lista-quartos/lista-quartos.component';
+import { DadosClienteComponent } from './reservas/dados-cliente/dados-cliente.component';
+import { ConfirmarReservaComponent } from './reservas/confirmar-reserva/confirmar-reserva.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +46,10 @@ import { NgxScrollTopModule } from 'ngx-scrolltop';
     FooterComponent,
     PerguntasComponent,
     TermosComponent,
-    PoliticaComponent
+    PoliticaComponent,
+    ListaQuartosComponent,
+    DadosClienteComponent,
+    ConfirmarReservaComponent
   ],
   imports: [
     BrowserModule,

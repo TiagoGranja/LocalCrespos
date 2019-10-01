@@ -1,1 +1,10 @@
 <p>reservas works!</p>
+
+<div class="form-group">
+  <button (click)="lerCliente()">Ver nome cliente</button>
+</div>
+
+<div *ngFor="let item of cliente" class="form-group">
+  <h3>{{item.nome}}</h3>
+</div>
+
