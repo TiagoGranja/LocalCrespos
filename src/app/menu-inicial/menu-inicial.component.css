@@ -1,12 +1,18 @@
 .jumbotron {
+    color:white;
+    font-family: "Helvetica Neue";
     min-height: 220px;
-    background-image: url('src/assets/natureza3.jpg');
-    background-position: center;
+    background-image: url('src/assets/lenha.jpg');
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: 0%;
-    filter: grayscale(0%);
+    filter: grayscale(90%);
    }
+
+.h1, h1 {
+    font-size: 3.5rem;
+}
 
 .margem{
   margin-left: 40px
