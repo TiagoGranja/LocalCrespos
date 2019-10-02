@@ -3,7 +3,7 @@
 }
 
 /*formatação dos ícones redes sociais*/
-.fa {
+.icon-social-facebook, .icon-social-twitter, .icon-social-instagram {
   padding: 10px;
   font-size: 10px;
   width: 30px;
@@ -15,17 +15,17 @@
   color: white;
 }
 
-.fa:hover.icon-social-facebook{
+.icon-social-facebook:hover.icon-social-facebook{
   background: #3B5998;
   color: white;
 }
 
-.fa:hover.icon-social-twitter{
+.icon-social-twitter:hover.icon-social-twitter{
   background: #55ACEE;
   color: white;
 }
 
-.fa:hover.icon-social-instagram{
+.icon-social-instagram:hover.icon-social-instagram{
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
   color: white;
 }
