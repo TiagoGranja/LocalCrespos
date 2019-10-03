@@ -44,7 +44,7 @@
 
     <!-- botão enviar-->
   <div class="form-actions">
-      <button type="submit" class="button is-danger is-large submit btn">Enviar</button>
+      <button [disabled]="emailInput.invalid || messageInput.invalid || subjectInput.invalid || nameInput.invalid" type="submit" class="button is-danger is-large submit btn">Enviar</button>
     </div>
   </form>
 </div>

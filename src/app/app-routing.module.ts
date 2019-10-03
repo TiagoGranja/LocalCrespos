@@ -15,6 +15,7 @@ import { PoliticaComponent } from './footer/politica/politica.component';
 import { PerguntasComponent } from './footer/perguntas/perguntas.component';
 import { TermosComponent } from './footer/termos/termos.component';
 import { ReservasComponent } from './reservas/reservas.component';
+import { ListaQuartosComponent } from './reservas/lista-quartos/lista-quartos.component';
 
 const routes: Routes = [
  {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -32,6 +33,7 @@ const routes: Routes = [
  {path: 'perguntas', component: PerguntasComponent},
  {path: 'termos', component: TermosComponent},
  {path: 'reservas', component: ReservasComponent},
+ {path: 'listaQuartos', component: ListaQuartosComponent},
 
  {path: '**', redirectTo: 'home', pathMatch: 'full'}//tem que vir no final
 ];
