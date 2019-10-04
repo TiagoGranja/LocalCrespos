@@ -1,4 +1,84 @@
 .container {
   border-radius: 5px;
   padding-bottom: 0px;
+  margin-bottom: 15%;
 }
+
+/*formulario reservas*/
+
+.booking {
+  position: relative;
+  background-color: rgba(0,0,0,.03);
+  padding: 30px;
+  padding-bottom: 60px;
+  border: 1px solid #ccc;
+  border-radius: 14px;
+  box-sizing: border-box;
+}
+
+.booking .field-icon-wrap {
+  position: relative;
+}
+
+.booking .field-icon-wrap .form-control {
+  height: 52px ;
+  position: relative;
+  padding-right: 40px;
+  -webkit-box-shadow: none ;
+  box-shadow: none;
+  color: #a6a6a6;
+  background-color: rgba(0,0,0,.03);
+}
+.booking .field-icon-wrap .icon {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 15px;
+  z-index: 2;
+}
+.booking .field-icon-wrap select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+}
+.booking .btn {
+  height: 52px;
+}
+
+.btn {
+  background-color: gray;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: black;
+}
+
+.btn:focus {
+  border-color: none;
+  box-shadow: none;
+  outline: none;
+}
+
+.field-icon-wrap:hover{
+  background-color: lightgrey;
+}
+.field-icon-wrap.active{
+  background-color: gray;
+}
+
+
+/*form control*/
+
+.form-control, .form-control:focus, .form-control:active {
+  color: #000;
+  border-color: #000;
+}
+
