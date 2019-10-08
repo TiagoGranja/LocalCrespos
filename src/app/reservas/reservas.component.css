@@ -82,3 +82,7 @@
   border-color: #000;
 }
 
+/* formatar output pesquisa */
+.row {
+  padding-left: 4vw;
+}
