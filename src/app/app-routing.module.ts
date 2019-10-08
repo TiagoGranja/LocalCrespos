@@ -35,7 +35,7 @@ const routes: Routes = [
  {path: 'reservas', component: ReservasComponent},
  {path: 'listaQuartos', component: ListaQuartosComponent},
 
- {path: '**', redirectTo: 'home', pathMatch: 'full'}//tem que vir no final
+ {path: '**', redirectTo: 'home', pathMatch: 'full'}// tem que vir no final
 ];
 
 @NgModule({

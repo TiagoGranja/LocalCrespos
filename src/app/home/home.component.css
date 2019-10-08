@@ -27,3 +27,13 @@
     background-color: #f8f9fa;
 
   }
+/* area API meteorologia */
+.col-auto_tempo{
+    background-color: #888;
+    color: white;
+    margin-top: 4vh;
+    padding-top: 3vh;
+    padding-bottom: 2vh;
+    padding-left: 4vw;
+    padding-right: 4vw;
+}
