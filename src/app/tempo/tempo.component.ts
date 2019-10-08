@@ -10,11 +10,11 @@ export class TempoComponent implements OnInit {
 temp: string;
 stateweather: string;
 firstPartLink = 'http://openweathermap.org/img/wn/';
-secondPart: string //codigo do icon
+secondPart: string // codigo do icon
 lastPart = '@2x.png';
 
 srcImg: string;
-//http://openweathermap.org/img/wn/10d@2x.png
+// http://openweathermap.org/img/wn/10d@2x.png
 myWeatherPath: TempoService;
 
   constructor(myWeather: TempoService) {
@@ -28,7 +28,7 @@ myWeatherPath: TempoService;
 
 
 lerTempo() {
-  //this.weatherService.city = 'Barcelos';
+  // this.weatherService.city = 'Barcelos';
   this.myWeatherPath.baseask().subscribe(
     data => {
       console.log(data);
