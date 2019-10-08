@@ -1,4 +1,24 @@
-.container {
-  border-radius: 5px;
-  padding-bottom: 0px;
+
+/* icons */
+
+.utilidades {
+  margin-top: 5vh;
+  padding-top: 7vh;
+  padding-bottom: 7vh;
+  padding-left: 4vw;
+  padding-right: 4vw;
+  background-color: #888;
+  color: white;
+
+}
+
+.utilidades img {
+  width: 21%;
+  margin-top: 2vh;
+  object-fit: cover;
+}
+
+.utilidades p{
+  padding-bottom: 15px;
+  padding-top: 15px;
 }
