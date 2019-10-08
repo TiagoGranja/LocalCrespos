@@ -10,7 +10,7 @@ export class TempoComponent implements OnInit {
 temp: string;
 stateweather: string;
 firstPartLink = 'http://openweathermap.org/img/wn/';
-secondPart: string // codigo do icon
+secondPart: string; // codigo do icon
 lastPart = '@2x.png';
 
 srcImg: string;

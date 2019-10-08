@@ -8,14 +8,14 @@ import { ApiInternaService } from '../api-interna.service';
 })
 export class ReservasComponent implements OnInit {
 
-  //cliente: Array<any>;
-  cliente;//array embrulhado de valores que
+  // cliente: Array<any>;
+  cliente; // array embrulhado de valores que
   tipoQuartoTodos;
   tipoQuartoSingle;
   tipoQuartoDouble;
   tipoQuartoApartamento;
 
-  //Select para selecionar o tipo de quarto a pesquisar
+  // Select para selecionar o tipo de quarto a pesquisar
   tiposQuartos = [{name: 'todos'}, {name: 'single'}, {name: 'double'}, {name: 'apartamento'}];
   tipoQuartoSelecionadoObj = this.tiposQuartos[0];
 
@@ -49,7 +49,7 @@ export class ReservasComponent implements OnInit {
     } else {}
   }
 
-  //função que vai buscar ao serviço os valores do array clientes
+  // função que vai buscar ao serviço os valores do array clientes
   lerCliente() {
     this.clienteServiceCaminho.clienteGet().subscribe(
       (data) => { this.cliente = data; }// ver no postman que a data é um array
