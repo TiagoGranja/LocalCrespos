@@ -4,4 +4,7 @@ export class Quarto {
   capacidade: number;
   area: number;
   imagem: any;
+  preco: number;
+  numQuarto: number;
+  descricao: string;
 }

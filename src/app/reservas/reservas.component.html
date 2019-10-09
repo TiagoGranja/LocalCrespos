@@ -94,25 +94,36 @@
 <div *ngFor="let item of cliente" class="form-group">
   <h3>{{item.nome}}</h3>
 </div>
- -->
 
+
+
+ <div *ngFor="let item of cliente" class="form-group">
+    <h3>{{item.nome}}</h3>
+  </div>
+
+  <div *ngFor="let item of tipoQuartoTodos" class="form-group">
+    <h3><img  src="data:image/gif;base64,{{item.imagem}}" class='img' style="max-width: 300px"> {{item.codigo_quarto}} {{item.descricao_tipoQuarto}} {{item.area}}</h3>
+
+  </div>
+
+ -->
 
 <div *ngFor="let item of tipoQuartoTodos" class="form-group">
   <div class="row">
-    <img  src="..\assets\quarto3.jpg" class='img' style="max-width: 400px">
+    <img  src="data:image/gif;base64,{{item.imagem}}" class='img' style="max-width: 400px">
     <div class="col">
-      <h2 class="tipo-quarto"> {{item.tiposQuartos}}
-      </h2>
-      <h4 class="list-group-item-heading">{{item.descricao_stipoQuarto}}</h4>
-      <p class="list-group-item-text"><b>Nº Quarto:</b> {{item.codigo_quarto}} </p>
+      <div class="col-md-6  col-lg-9">
+      <h2 class="tipo-quarto"> {{item.tiposQuartos}}</h2>
+      <h5 class="list-group-item-heading">{{item.descricao_stipoQuarto}}</h5>
+      <p class="list-group-item-text"><b>Nº Quarto:</b> {{item.num_Quarto}} </p>
      <p> <b>Área:</b> {{item.area}} m2</p>
-     <p>necessitatibus molestiae reprehenderit recusandae!</p>
-      <p> Officiis quas dicta tempore illo accusamus.</p>
-      <p><b>Preço:</b></p>
+         <h5>{{item.descr}}</h5>
+       <h2>Preço: €{{item.preco}}</h2>
         <button (click)="pesquisarTipoQuarto()">Selecionar</button>
       </div>
     </div>
   </div>
+</div>
 
 
 <!--
