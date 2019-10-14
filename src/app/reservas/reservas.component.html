@@ -87,6 +87,7 @@
 
 
 
+
 <!-- Botão Ler Clientes
 <div class="form-group">
   <button (click)="lerCliente()">Ver lista de clientes</button>
@@ -100,27 +101,29 @@
 
 
 <!-- Lista de Tipos de Quarto -->
-
+<div class="container text-center w-responsive mx-auto">
 <div *ngFor="let item of tipoQuartoTodos" class="form-group">
   <div class="row">
     <img  src="data:image/gif;base64,{{item.imagem}}" class='img' style="max-width: 400px">
     <div class="col">
       <div class="col-md-6  col-lg-9">
       <h2 class="tipo-quarto"> {{item.tiposQuartos}}</h2>
-      <h5 class="list-group-item-heading">{{item.descricao_stipoQuarto}}</h5>
+      <h5 class="list-group-item-heading">{{item.descricao_tipoQuarto}}</h5>
       <p class="list-group-item-text"><b>Nº Quarto:</b> {{item.num_Quarto}} </p>
      <p> <b>Área:</b> {{item.area}} m2</p>
          <h5>{{item.descr}}</h5>
        <h2>Preço: €{{item.preco}}</h2>
 
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-          Reservar
-        </button>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+            Reservar
+          </button>
 
+         </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
   <!-- The Modal -->
   <div class="modal fade" id="myModal">
@@ -171,5 +174,7 @@
       </div>
     </div>
   </div>
+
+
 
 
