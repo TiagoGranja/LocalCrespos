@@ -87,14 +87,14 @@
 
 
 
-<!-- Botão Ler Clientes -->
+<!-- Botão Ler Clientes
 <div class="form-group">
   <button (click)="lerCliente()">Ver lista de clientes</button>
 </div>
-<!-- Lista de Clientes -->
+ Lista de Clientes
 <div *ngFor="let item of cliente" class="form-group">
   <h3>{{item.cod_Cliente}}, {{item.telefone}}, {{item.email}}, {{item.nome}}, {{item.data_Nasc | date:'yyyy/MM/dd' }}, {{item.genero}}</h3>
-</div>
+</div>-->
 
 
 
@@ -114,7 +114,7 @@
        <h2>Preço: €{{item.preco}}</h2>
 
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-          Open modal
+          Reservar
         </button>
 
       </div>
@@ -129,16 +129,16 @@
 
         <!-- Modal Header -->
         <div class="modal-header">
-          <h4 class="modal-title">Modal Heading</h4>
+          <h4 class="modal-title">Insira os seus dados</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
 
         <!-- Modal body -->
         <div class="modal-body">
-          <!-- Formulário de Input Cliente -->
+          <!-- Formulário de Input Cliente
 
           <input name="ctrlcodCliente" #ctrlcodCliente="ngModel" class="form-control" placeholder="codCliente" type="number"
-          [(ngModel)]="codCliente" required>
+          [(ngModel)]="codCliente" required>-->
 
           <input name="ctrltelefone" #ctrltelefone="ngModel" class="form-control" placeholder="telefone"
           type="string" [(ngModel)]="telefone" required>
@@ -158,16 +158,16 @@
 
 
           <!-- Botão Cliente -->
-          <div class="form-group">
-          <button class="btn btn-success btn-lg btn-block" (click)="onCreatePost()">Adicionar Cliente</button>
+          <div class="modal-footer">
+          <button class="btn btn-success btn-lg btn-block" (click)="onCreatePost()" data-dismiss="modal">Submeter dados</button>
           </div>
         </div>
 
-        <!-- Modal footer -->
+        <!-- Modal footer
         <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
         </div>
-
+        -->
       </div>
     </div>
   </div>
