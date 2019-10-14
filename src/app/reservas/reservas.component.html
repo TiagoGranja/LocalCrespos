@@ -101,12 +101,12 @@
 
 
 <!-- Lista de Tipos de Quarto -->
-<div class="container text-center w-responsive mx-auto">
+<div class="container text-center w-responsive">
 <div *ngFor="let item of tipoQuartoTodos" class="form-group">
   <div class="row">
     <img  src="data:image/gif;base64,{{item.imagem}}" class='img' style="max-width: 400px">
     <div class="col">
-      <div class="col-md-6  col-lg-9">
+      <div class="col-md-6  col-lg-9 text-left">
       <h2 class="tipo-quarto"> {{item.tiposQuartos}}</h2>
       <h5 class="list-group-item-heading">{{item.descricao_tipoQuarto}}</h5>
       <p class="list-group-item-text"><b>Nº Quarto:</b> {{item.num_Quarto}} </p>
