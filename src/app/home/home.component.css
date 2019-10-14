@@ -1,3 +1,8 @@
+.container {
+  border-radius: 5px;
+  padding-bottom: 0px;
+}
+
 .map-container{
   overflow:hidden;
   padding-bottom:56.25%;
@@ -31,8 +36,7 @@
 .col-auto_tempo{
     background-color: #888;
     color: white;
-    margin-top: 4vh;
-    padding-top: 3vh;
+    padding-top: 2vh;
     padding-bottom: 2vh;
     padding-left: 4vw;
     padding-right: 4vw;

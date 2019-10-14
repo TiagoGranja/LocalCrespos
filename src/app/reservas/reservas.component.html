@@ -35,13 +35,14 @@
                 />
               </div>
             </div>
+            <!--Selecionar o tipo de quarto-->
             <div class="col-md-6 mb-3 mb-md-0 col-lg-3">
               <div class="row">
                   <div class="col-md-12 mb-6 mb-md-0">
                       <label for="roomtype">Tipo de Quarto</label>
                       <div class="field-icon-wrap">
                         <div class="icon"><span class="icon-arrow-down"></span></div>
-                        <select class="form-control" [(ngModel)]="tipoQuartoSelecionadoObj" (ngModelChange)="pesquisarTipoQuarto($event)"
+                        <select class="form-control" [(ngModel)]="tipoQuartoSelecionadoObj"
                         name="sel3">
                         <option [ngValue]="i" *ngFor="let i of tiposQuartos">{{i.name}}</option>
                         </select>
@@ -77,7 +78,7 @@
 
             </div>
             <div class="col-md-6 col-lg-3 align-self-end">
-              <button class="btn btn-block">Verificar disponibilidade</button>
+              <button class="btn btn-block" (click)="pesquisarTipoQuarto(tipoQuartoSelecionadoObj)">Verificar disponibilidade</button>
             </div>
           </div>
         </form>
@@ -96,40 +97,78 @@
 </div>
 
 
-<!--Selecionar o tipo de quarto-->
-<div class="form-group col-md-2">
-  <select class="form-control" [(ngModel)]="tipoQuartoSelecionadoObj" (ngModelChange)="pesquisarTipoQuarto($event)"
-    name="sel3">
-    <option [ngValue]="i" *ngFor="let i of tiposQuartos">{{i.name}}</option>
-  </select>
-</div>
+
+
 <!-- Lista de Tipos de Quarto -->
 <div *ngFor="let item of tipoQuartoTodos" class="form-group">
-  <h3><img  src="data:image/gif;base64,{{item.imagem}}" class='img' style="max-width: 300px"> {{item.codigo_quarto}} {{item.descricao_tipoQuarto}} {{item.area}}</h3>
+  <div class="row">
+    <img  src="data:image/gif;base64,{{item.imagem}}" class='img' style="max-width: 400px">
+    <div class="col">
+      <div class="col-md-6  col-lg-9">
+      <h2 class="tipo-quarto"> {{item.tiposQuartos}}</h2>
+      <h5 class="list-group-item-heading">{{item.descricao_stipoQuarto}}</h5>
+      <p class="list-group-item-text"><b>Nº Quarto:</b> {{item.num_Quarto}} </p>
+     <p> <b>Área:</b> {{item.area}} m2</p>
+         <h5>{{item.descr}}</h5>
+       <h2>Preço: €{{item.preco}}</h2>
+
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+          Open modal
+        </button>
+
+      </div>
+    </div>
+  </div>
 </div>
 
-<!-- Formulário de Input Cliente -->
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
 
-<input name="ctrlcodCliente" #ctrlcodCliente="ngModel" class="form-control" placeholder="codCliente" type="number"
-[(ngModel)]="codCliente" required>
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
 
-<input name="ctrltelefone" #ctrltelefone="ngModel" class="form-control" placeholder="telefone"
-type="string" [(ngModel)]="telefone" required>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <!-- Formulário de Input Cliente -->
 
-<input name="ctrlemail" #ctrlemail="ngModel" class="form-control" placeholder="email"
-type="string" [(ngModel)]="email" required>
+          <input name="ctrlcodCliente" #ctrlcodCliente="ngModel" class="form-control" placeholder="codCliente" type="number"
+          [(ngModel)]="codCliente" required>
 
-<input name="ctrlnome" #ctrlnome="ngModel" class="form-control" placeholder="nome"
-type="string" [(ngModel)]="nome" required>
+          <input name="ctrltelefone" #ctrltelefone="ngModel" class="form-control" placeholder="telefone"
+          type="string" [(ngModel)]="telefone" required>
 
-<input name="ctrldataNasc" #ctrldataNasc="ngModel" class="form-control" placeholder="dataNasc"
-type="date" [(ngModel)]="dataNasc" required>
-
-<input name="ctrlgenero" #ctrlgenero="ngModel" class="form-control" placeholder="genero"
-type="string" [(ngModel)]="genero" required>
+          <input name="ctrlemail" #ctrlemail="ngModel" class="form-control" placeholder="email"
+          type="string" [(ngModel)]="email" required>
 
 
-<!-- Botão Cliente -->
-<div class="form-group">
-<button class="btn btn-success btn-lg btn-block" (click)="onCreatePost()">Adicionar Cliente</button>
-</div>
+          <input name="ctrlnome" #ctrlnome="ngModel" class="form-control" placeholder="nome"
+          type="string" [(ngModel)]="nome" required>
+
+          <input name="ctrldataNasc" #ctrldataNasc="ngModel" class="form-control" placeholder="dataNasc"
+          type="date" [(ngModel)]="dataNasc" required>
+
+          <input name="ctrlgenero" #ctrlgenero="ngModel" class="form-control" placeholder="genero"
+          type="string" [(ngModel)]="genero" required>
+
+
+          <!-- Botão Cliente -->
+          <div class="form-group">
+          <button class="btn btn-success btn-lg btn-block" (click)="onCreatePost()">Adicionar Cliente</button>
+          </div>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+

@@ -1,1 +1,27 @@
-<p>dados-cliente works!</p>
+<!-- Formulário de Input Cliente -->
+
+<input name="ctrlcodCliente" #ctrlcodCliente="ngModel" class="form-control" placeholder="codCliente" type="number"
+[(ngModel)]="codCliente" required>
+
+<input name="ctrltelefone" #ctrltelefone="ngModel" class="form-control" placeholder="telefone"
+type="string" [(ngModel)]="telefone" required>
+
+<input name="ctrlemail" #ctrlemail="ngModel" class="form-control" placeholder="email"
+type="string" [(ngModel)]="email" required>
+
+
+<input name="ctrlnome" #ctrlnome="ngModel" class="form-control" placeholder="nome"
+type="string" [(ngModel)]="nome" required>
+
+<input name="ctrldataNasc" #ctrldataNasc="ngModel" class="form-control" placeholder="dataNasc"
+type="date" [(ngModel)]="dataNasc" required>
+
+<input name="ctrlgenero" #ctrlgenero="ngModel" class="form-control" placeholder="genero"
+type="string" [(ngModel)]="genero" required>
+
+
+<!-- Botão Cliente -->
+<div class="form-group">
+<button class="btn btn-success btn-lg btn-block" (click)="onCreatePost()">Adicionar Cliente</button>
+</div>
+

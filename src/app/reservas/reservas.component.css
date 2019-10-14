@@ -83,12 +83,6 @@
   border-color: #000;
 }
 
-/* formatar output pesquisa */
-.row {
-  padding-left: 4vw;
-  scroll-padding-right: 10vw ;
-
-}
 /* formatar pesquisa quarto */
 .list-group-item-text {
   text-align: justify;
