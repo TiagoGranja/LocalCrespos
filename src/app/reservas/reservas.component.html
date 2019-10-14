@@ -83,9 +83,7 @@
           </div>
         </form>
       </div>
-    </div>
-
-
+      <div class="mt-5"></div>
 
 
 <!-- Botão Ler Clientes
@@ -97,9 +95,6 @@
   <h3>{{item.cod_Cliente}}, {{item.telefone}}, {{item.email}}, {{item.nome}}, {{item.data_Nasc | date:'yyyy/MM/dd' }}, {{item.genero}}</h3>
 </div>-->
 
-
-
-
 <!-- Lista de Tipos de Quarto -->
 <div class="container text-center w-responsive">
 <div *ngFor="let item of tipoQuartoTodos" class="form-group">
@@ -109,20 +104,21 @@
       <div class="col-md-6  col-lg-9 text-left">
       <h2 class="tipo-quarto"> {{item.tiposQuartos}}</h2>
       <h5 class="list-group-item-heading">{{item.descricao_tipoQuarto}}</h5>
-      <p class="list-group-item-text"><b>Nº Quarto:</b> {{item.num_Quarto}} </p>
+      <p class="list-group-item-text"><b>Nº Quarto:</b>{{item.num_Quarto}} </p>
      <p> <b>Área:</b> {{item.area}} m2</p>
          <h5>{{item.descr}}</h5>
        <h2>Preço: €{{item.preco}}</h2>
 
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+          <button type="button" class="btn" data-toggle="modal" data-target="#myModal">
             Reservar
           </button>
-
-         </div>
-        </div>
+      </div>
+      <hr class="mb-0">
+    </div>
       </div>
     </div>
   </div>
+</div>
 </section>
 
   <!-- The Modal -->
@@ -137,32 +133,46 @@
         </div>
 
         <!-- Modal body -->
-        <div class="modal-body">
+        <div class="modal-body pb-0">
           <!-- Formulário de Input Cliente
 
           <input name="ctrlcodCliente" #ctrlcodCliente="ngModel" class="form-control" placeholder="codCliente" type="number"
           [(ngModel)]="codCliente" required>-->
 
-          <input name="ctrltelefone" #ctrltelefone="ngModel" class="form-control" placeholder="telefone"
-          type="string" [(ngModel)]="telefone" required>
+            <input name="ctrltelefone" #ctrltelefone="ngModel" class="form-control" autocomplete="off" placeholder="Telefone" type="number" [(ngModel)]="telefone" required number minlength="7" #telefoneInput="ngModel"/>
+            <div class="help is-error" *ngIf="telefoneInput.invalid && telefoneInput.dirty">
+                Tem de colocar um número válido
+            </div>
 
-          <input name="ctrlemail" #ctrlemail="ngModel" class="form-control" placeholder="email"
-          type="string" [(ngModel)]="email" required>
+
+            <input name="ctrlemail" #ctrlemail="ngModel" class="form-control" autocomplete="off" placeholder="E-mail" type="email" [(ngModel)]="email" required email #emailInput="ngModel"/>
+            <div class="help is-error" *ngIf="emailInput.invalid && emailInput.dirty">
+              Tem de colocar um e-mail válido: exemplo@gmail.com
+            </div>
 
 
-          <input name="ctrlnome" #ctrlnome="ngModel" class="form-control" placeholder="nome"
-          type="string" [(ngModel)]="nome" required>
+            <input name="ctrlnome" #ctrlnome="ngModel" class="form-control" autocomplete="off" placeholder="Nome" type="string" [(ngModel)]="nome" required minlength="5" #nameInput="ngModel"/>
+            <div class="help is-error" *ngIf="nameInput.invalid && nameInput.dirty">
+                Campo obrigatório e deve ter pelo menos cinco caracteres
+            </div>
 
-          <input name="ctrldataNasc" #ctrldataNasc="ngModel" class="form-control" placeholder="dataNasc"
-          type="date" [(ngModel)]="dataNasc" required>
 
-          <input name="ctrlgenero" #ctrlgenero="ngModel" class="form-control" placeholder="genero"
-          type="string" [(ngModel)]="genero" required>
+
+            <input name="ctrldataNasc" #ctrldataNasc="ngModel" class="form-control" autocomplete="off" placeholder="Data de Nascimento" type="date" [(ngModel)]="dataNasc" required date #dataNascInput="ngModel"/>
+            <div class="help is-error" *ngIf="dataNascInput.invalid && dataNascInput.dirty">
+              Tem de colocar uma data válida
+            </div>
+
+
+            <input name="ctrlgenero" #ctrlgenero="ngModel" class="form-control" autocomplete="off" placeholder="Género" type="string" [(ngModel)]="genero" required maxlength="1" #generoInput="ngModel"/>
+            <div class="help is-error" *ngIf="generoInput.invalid && generoInput.dirty">
+              Campo obrigatório e deve ter colocar F ou M
+            </div>
 
 
           <!-- Botão Cliente -->
           <div class="modal-footer">
-          <button class="btn btn-success btn-lg btn-block" (click)="onCreatePost()" data-dismiss="modal">Submeter dados</button>
+             <button [disabled]="emailInput.invalid || generoInput.invalid || dataNascInput.invalid || nameInput.invalid || telefoneInput.invalid" type="submit" class="btn btn-success btn-lg btn-block" (click)="onCreatePost()" data-dismiss="modal">Submeter dados</button>
           </div>
         </div>
 
