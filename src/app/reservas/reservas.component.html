@@ -15,6 +15,8 @@
                   max="3000-12-31"
                   min="1000-01-01"
                   class="form-control"
+                  [(ngModel)]="checkinDate"
+                  required
                 />
               </div>
             </div>
@@ -28,6 +30,8 @@
                   min="1000-12-31"
                   max="3000-01-01"
                   class="form-control"
+                  [(ngModel)]="checkoutDate"
+                  required
                 />
               </div>
             </div>
@@ -79,77 +83,53 @@
         </form>
       </div>
     </div>
-<hr>
-<!-- listagem dos quartos
-<div>
-<app-lista-quartos></app-lista-quartos>
-</div>
--->
 
-<!--
+
+
+<!-- Botão Ler Clientes -->
 <div class="form-group">
-  <button (click)="lerCliente()">Ver nome cliente</button>
+  <button (click)="lerCliente()">Ver lista de clientes</button>
 </div>
-
+<!-- Lista de Clientes -->
 <div *ngFor="let item of cliente" class="form-group">
-  <h3>{{item.nome}}</h3>
+  <h3>{{item.cod_Cliente}}, {{item.telefone}}, {{item.email}}, {{item.nome}}, {{item.data_Nasc | date:'yyyy/MM/dd' }}, {{item.genero}}</h3>
 </div>
 
 
-
- <div *ngFor="let item of cliente" class="form-group">
-    <h3>{{item.nome}}</h3>
-  </div>
-
-  <div *ngFor="let item of tipoQuartoTodos" class="form-group">
-    <h3><img  src="data:image/gif;base64,{{item.imagem}}" class='img' style="max-width: 300px"> {{item.codigo_quarto}} {{item.descricao_tipoQuarto}} {{item.area}}</h3>
-
-  </div>
-
- -->
-
+<!--Selecionar o tipo de quarto-->
+<div class="form-group col-md-2">
+  <select class="form-control" [(ngModel)]="tipoQuartoSelecionadoObj" (ngModelChange)="pesquisarTipoQuarto($event)"
+    name="sel3">
+    <option [ngValue]="i" *ngFor="let i of tiposQuartos">{{i.name}}</option>
+  </select>
+</div>
+<!-- Lista de Tipos de Quarto -->
 <div *ngFor="let item of tipoQuartoTodos" class="form-group">
-  <div class="row">
-    <img  src="data:image/gif;base64,{{item.imagem}}" class='img' style="max-width: 400px">
-    <div class="col">
-      <div class="col-md-6  col-lg-9">
-      <h2 class="tipo-quarto"> {{item.tiposQuartos}}</h2>
-      <h5 class="list-group-item-heading">{{item.descricao_stipoQuarto}}</h5>
-      <p class="list-group-item-text"><b>Nº Quarto:</b> {{item.num_Quarto}} </p>
-     <p> <b>Área:</b> {{item.area}} m2</p>
-         <h5>{{item.descr}}</h5>
-       <h2>Preço: €{{item.preco}}</h2>
-        <button (click)="pesquisarTipoQuarto()">Selecionar</button>
-      </div>
-    </div>
-  </div>
+  <h3><img  src="data:image/gif;base64,{{item.imagem}}" class='img' style="max-width: 300px"> {{item.codigo_quarto}} {{item.descricao_tipoQuarto}} {{item.area}}</h3>
 </div>
 
+<!-- Formulário de Input Cliente -->
 
-<!--
+<input name="ctrlcodCliente" #ctrlcodCliente="ngModel" class="form-control" placeholder="codCliente" type="number"
+[(ngModel)]="codCliente" required>
 
-<div class="container">
-  <h2>Listagem dos quartos diponíveis</h2>
-  <div class="list-group">
-      <ul>
-          <div class="row">
-            <img src="..\assets\quarto3.jpg" class='img' style="max-width: 400px">
-            <div class="col">
-                <h2 class="tipo-quarto"> {{item.tiposQuartos}} </h2>
-                <h4 class="list-group-item-heading">First List Group Item Heading</h4>
-                <div>
-                   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                <p>Magnam doloremque illo voluptatibus tenetur sint adipisci quae aut sed corporis,</p>
-                <p>necessitatibus molestiae reprehenderit recusandae!</p>
-                <p> Officiis quas dicta tempore illo accusamus.</p>
+<input name="ctrltelefone" #ctrltelefone="ngModel" class="form-control" placeholder="telefone"
+type="string" [(ngModel)]="telefone" required>
 
-                  </h2>
-                  <h4 class="list-group-item-heading">{{item.descricao_stipoQuarto}}</h4>
-                  <p class="list-group-item-text"> Nº Quarto: {{item.codigo_quarto}} </p>
-                 <p> Área: {{item.area}} m2</p>
-                    <button (click)="lerCliente()">Selecionare</button>
-                  </div>
-            </div>
-          </div>
+<input name="ctrlemail" #ctrlemail="ngModel" class="form-control" placeholder="email"
+type="string" [(ngModel)]="email" required>
 
- -->
+<input name="ctrlnome" #ctrlnome="ngModel" class="form-control" placeholder="nome"
+type="string" [(ngModel)]="nome" required>
+
+<input name="ctrldataNasc" #ctrldataNasc="ngModel" class="form-control" placeholder="dataNasc"
+type="date" [(ngModel)]="dataNasc" required>
+
+<input name="ctrlgenero" #ctrlgenero="ngModel" class="form-control" placeholder="genero"
+type="string" [(ngModel)]="genero" required>
+
+
+<!-- Botão Cliente -->
+<div class="form-group">
+<button class="btn btn-success btn-lg btn-block" (click)="onCreatePost()">Adicionar Cliente</button>
+</div>
