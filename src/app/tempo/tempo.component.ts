@@ -9,12 +9,11 @@ import { TempoService } from '../http-tempo.service';
 export class TempoComponent implements OnInit {
 temp: string;
 stateweather: string;
+// dividir o link do icon em 3 partes
 firstPartLink = 'http://openweathermap.org/img/wn/';
 secondPart: string; // codigo do icon
 lastPart = '@2x.png';
-
-srcImg: string;
-// http://openweathermap.org/img/wn/10d@2x.png
+srcImg: string; // http://openweathermap.org/img/wn/10d@2x.png
 myWeatherPath: TempoService;
 
   constructor(myWeather: TempoService) {
