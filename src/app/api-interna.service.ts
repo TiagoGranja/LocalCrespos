@@ -12,9 +12,9 @@ export class ApiInternaService {
 
   urlCliente = 'https://localhost:44387/api/cliente'; // 2º variable which stores the address of the remote API server
   urlTipoQuartoTodos = 'https://localhost:44387/api/quarto/todos';
-  urlTipoQuartoSingle = 'https://localhost:44387/api/quarto/single';
-  urlTipoQuartoDouble = 'https://localhost:44387/api/quarto/double';
-  urlTipoQuartoApartamento = 'https://localhost:44387/api/quarto/apartamento';
+  urlTipoQuartoSingle = 'https://localhost:44387/api/quarto/todos';
+  urlTipoQuartoDouble = 'https://localhost:44387/api/quarto/todos';
+  urlTipoQuartoApartamento = 'https://localhost:44387/api/quarto/todos';
 
   constructor(private http: HttpClient) { }// 1º inject HttpClient as a private httpClient instance in the service's constructor
 
