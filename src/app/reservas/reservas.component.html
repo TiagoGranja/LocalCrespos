@@ -2,55 +2,40 @@
   <h2 class="h1-responsive font-weight-bold text-center mb-4">Reservar agora!</h2>
   <p></p>
   <div class="container text-center w-responsive mx-auto">
-      <div class="booking">
-        <form action="#">
-          <div class="row">
-            <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
-              <label for="checkin">Check In</label>
-              <div class="field-icon-wrap">
-                <div class="icon"><span class="icon-calendar"></span></div>
-                <input
-                  type="date"
-                  name="checkin_date"
-                  max="3000-12-31"
-                  min="1000-01-01"
-                  class="form-control"
-                  [(ngModel)]="checkinDate"
-                  required
-                />
+    <div class="booking">
+      <form action="#">
+        <div class="row">
+          <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
+            <label for="checkin">Check In</label>
+            <div class="field-icon-wrap">
+              <div class="icon"><span class="icon-calendar"></span></div>
+              <input type="date" name="checkin_date" max="3000-12-31" min="1000-01-01" class="form-control"
+                [(ngModel)]="checkinDate" required />
+            </div>
+          </div>
+          <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
+            <label for="checkin">Check Out</label>
+            <div class="field-icon-wrap">
+              <div class="icon"><span class="icon-calendar"></span></div>
+              <input type="date" name="checkout_date" min="1000-12-31" max="3000-01-01" class="form-control"
+                [(ngModel)]="checkoutDate" required />
+            </div>
+          </div>
+          <!--Selecionar o tipo de quarto-->
+          <div class="col-md-6 mb-3 mb-md-0 col-lg-3">
+            <div class="row">
+              <div class="col-md-12 mb-6 mb-md-0">
+                <label for="roomtype">Tipo de Quarto</label>
+                <div class="field-icon-wrap">
+                  <div class="icon"><span class="icon-arrow-down"></span></div>
+                  <select class="form-control" [(ngModel)]="tipoQuartoSelecionadoObj" name="sel3">
+                    <option [ngValue]="i" *ngFor="let i of tiposQuartos">{{i.name}}</option>
+                  </select>
+                </div>
               </div>
             </div>
-            <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
-              <label for="checkin">Check Out</label>
-              <div class="field-icon-wrap">
-                <div class="icon"><span class="icon-calendar"></span></div>
-                <input
-                  type="date"
-                  name="checkout_date"
-                  min="1000-12-31"
-                  max="3000-01-01"
-                  class="form-control"
-                  [(ngModel)]="checkoutDate"
-                  required
-                />
-              </div>
-            </div>
-            <!--Selecionar o tipo de quarto-->
-            <div class="col-md-6 mb-3 mb-md-0 col-lg-3">
-              <div class="row">
-                  <div class="col-md-12 mb-6 mb-md-0">
-                      <label for="roomtype">Tipo de Quarto</label>
-                      <div class="field-icon-wrap">
-                        <div class="icon"><span class="icon-arrow-down"></span></div>
-                        <select class="form-control" [(ngModel)]="tipoQuartoSelecionadoObj"
-                        name="sel3">
-                        <option [ngValue]="i" *ngFor="let i of tiposQuartos">{{i.name}}</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
 
-                <!-- <div class="col-md-6 mb-3 mb-md-0">
+            <!-- <div class="col-md-6 mb-3 mb-md-0">
                   <label for="checkin">Adultos</label>
                   <div class="field-icon-wrap">
                     <div class="icon"><span class="icon-arrow-down"></span></div>
@@ -76,17 +61,18 @@
                 </div>
               </div> -->
 
-            </div>
-            <div class="col-md-6 col-lg-3 align-self-end">
-              <button class="btn btn-block" (click)="pesquisarTipoQuarto(tipoQuartoSelecionadoObj)">Verificar disponibilidade</button>
-            </div>
           </div>
-        </form>
-      </div>
-      <div class="mt-5"></div>
+          <div class="col-md-6 col-lg-3 align-self-end">
+            <button class="btn btn-block" (click)="pesquisarTipoQuarto(tipoQuartoSelecionadoObj)">Verificar a
+              disponibilidade</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="mt-5"></div>
 
 
-<!-- Botão Ler Clientes
+    <!-- Botão Ler Clientes
 <div class="form-group">
   <button (click)="lerCliente()">Ver lista de clientes</button>
 </div>
@@ -95,96 +81,101 @@
   <h3>{{item.cod_Cliente}}, {{item.telefone}}, {{item.email}}, {{item.nome}}, {{item.data_Nasc | date:'yyyy/MM/dd' }}, {{item.genero}}</h3>
 </div>-->
 
-<!-- Lista de Tipos de Quarto -->
-<div class="container text-center w-responsive">
-<div *ngFor="let item of tipoQuartoTodos" class="form-group">
-  <div class="row">
-    <img  src="data:image/gif;base64,{{item.imagem}}" class='img' style="max-width: 400px">
-    <div class="col">
-      <div class="col-md-6  col-lg-9 text-left">
-      <h2 class="tipo-quarto"> {{item.tiposQuartos}}</h2>
-      <h5 class="list-group-item-heading">{{item.descricao_tipoQuarto}}</h5>
-      <p class="list-group-item-text"><b>Nº Quarto:</b>{{item.num_Quarto}} </p>
-     <p> <b>Área:</b> {{item.area}} m2</p>
-         <h5>{{item.descr}}</h5>
-       <h2>Preço: €{{item.preco}}</h2>
+    <!-- Lista de Tipos de Quarto -->
+    <div class="container text-center w-responsive">
+      <div *ngFor="let item of tipoQuartoTodos" class="form-group">
+        <div class="row">
+          <img src="data:image/gif;base64,{{item.imagem}}" class='img' style="max-width: 400px"/>
+          <div class="col">
+            <div class="col-md-6 col-lg-9 text-left">
+              <p class="tipo-quarto text-uppercase"><b> {{item.tiposQuartos}} </b></p>
+              <p class="list-group-item-heading"> {{item.descricao_tipoQuarto}} </p>
+              <p class="list-group-item-text"><b>Nº Quarto: </b> {{item.num_Quarto}} </p>
+              <p><b>Área:</b> {{item.area}} m2</p>
+              <p>{{item.descr}}</p>
+              <p><b>Preço:</b> {{item.preco}} EUR / Noite - Impostos e taxas incluídos</p>
 
-          <button type="button" class="btn" data-toggle="modal" data-target="#myModal">
-            Reservar
-          </button>
-      </div>
-      <hr class="mb-0">
-    </div>
+              <button type="button" class="btn" data-toggle="modal" data-target="#myModal">
+                Reservar
+              </button>
+            </div>
+            <hr class="mb-0">
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
 </section>
 
-  <!-- The Modal -->
-  <div class="modal fade" id="myModal">
-    <div class="modal-dialog">
-      <div class="modal-content">
+<!-- The Modal -->
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
 
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">Insira os seus dados</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Insira os seus dados</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
 
-        <!-- Modal body -->
-        <div class="modal-body pb-0">
-          <!-- Formulário de Input Cliente
+      <!-- Modal body -->
+      <div class="modal-body pb-0">
+        <!-- Formulário de Input Cliente
 
           <input name="ctrlcodCliente" #ctrlcodCliente="ngModel" class="form-control" placeholder="codCliente" type="number"
           [(ngModel)]="codCliente" required>-->
 
-            <input name="ctrltelefone" #ctrltelefone="ngModel" class="form-control" autocomplete="off" placeholder="Telefone" type="number" [(ngModel)]="telefone" required number minlength="7" #telefoneInput="ngModel"/>
-            <div class="help is-error" *ngIf="telefoneInput.invalid && telefoneInput.dirty">
-                Tem de colocar um número válido
-            </div>
-
-
-            <input name="ctrlemail" #ctrlemail="ngModel" class="form-control" autocomplete="off" placeholder="E-mail" type="email" [(ngModel)]="email" required email #emailInput="ngModel"/>
-            <div class="help is-error" *ngIf="emailInput.invalid && emailInput.dirty">
-              Tem de colocar um e-mail válido: exemplo@gmail.com
-            </div>
-
-
-            <input name="ctrlnome" #ctrlnome="ngModel" class="form-control" autocomplete="off" placeholder="Nome" type="string" [(ngModel)]="nome" required minlength="5" #nameInput="ngModel"/>
-            <div class="help is-error" *ngIf="nameInput.invalid && nameInput.dirty">
-                Campo obrigatório e deve ter pelo menos cinco caracteres
-            </div>
-
-
-
-            <input name="ctrldataNasc" #ctrldataNasc="ngModel" class="form-control" autocomplete="off" placeholder="Data de Nascimento" type="date" [(ngModel)]="dataNasc" required date #dataNascInput="ngModel"/>
-            <div class="help is-error" *ngIf="dataNascInput.invalid && dataNascInput.dirty">
-              Tem de colocar uma data válida
-            </div>
-
-
-            <input name="ctrlgenero" #ctrlgenero="ngModel" class="form-control" autocomplete="off" placeholder="Género" type="string" [(ngModel)]="genero" required maxlength="1" #generoInput="ngModel"/>
-            <div class="help is-error" *ngIf="generoInput.invalid && generoInput.dirty">
-              Campo obrigatório e deve ter colocar F ou M
-            </div>
-
-
-          <!-- Botão Cliente -->
-          <div class="modal-footer">
-             <button [disabled]="emailInput.invalid || generoInput.invalid || dataNascInput.invalid || nameInput.invalid || telefoneInput.invalid" type="submit" class="btn btn-success btn-lg btn-block" (click)="onCreatePost()" data-dismiss="modal">Submeter dados</button>
-          </div>
+        <input name="ctrltelefone" #ctrltelefone="ngModel" class="form-control mb-1 mdbody" autocomplete="off"
+          placeholder="Telefone" type="number" [(ngModel)]="telefone" required number minlength="7"
+          #telefoneInput="ngModel" />
+        <div class="help is-error" *ngIf="telefoneInput.invalid && telefoneInput.dirty">
+          Tem de colocar um número válido
         </div>
 
-        <!-- Modal footer
+
+        <input name="ctrlemail" #ctrlemail="ngModel" class="form-control mb-1 mdbody" autocomplete="off" placeholder="E-mail"
+          type="email" [(ngModel)]="email" required email #emailInput="ngModel" />
+        <div class="help is-error" *ngIf="emailInput.invalid && emailInput.dirty">
+          Tem de colocar um e-mail válido: exemplo@gmail.com
+        </div>
+
+
+        <input name="ctrlnome" #ctrlnome="ngModel" class="form-control mb-1 mdbody" autocomplete="off" placeholder="Nome"
+          type="string" [(ngModel)]="nome" required minlength="5" #nameInput="ngModel" />
+        <div class="help is-error" *ngIf="nameInput.invalid && nameInput.dirty">
+          Campo obrigatório e deve ter pelo menos cinco caracteres
+        </div>
+
+
+
+        <input name="ctrldataNasc" #ctrldataNasc="ngModel" class="form-control mb-1 mdbody" autocomplete="off"
+          placeholder="Data de Nascimento" type="date" [(ngModel)]="dataNasc" required date #dataNascInput="ngModel" />
+        <div class="help is-error" *ngIf="dataNascInput.invalid && dataNascInput.dirty">
+          Tem de colocar uma data válida
+        </div>
+
+
+        <input name="ctrlgenero" #ctrlgenero="ngModel" class="form-control mb-1 mdbody" autocomplete="off" placeholder="Género"
+          type="string" [(ngModel)]="genero" required maxlength="1" #generoInput="ngModel" />
+        <div class="help is-error" *ngIf="generoInput.invalid && generoInput.dirty">
+          Campo obrigatório e deve ter colocar F ou M
+        </div>
+
+
+        <!-- Botão Cliente -->
+        <div class="modal-footer">
+          <button
+            [disabled]="emailInput.invalid || generoInput.invalid || dataNascInput.invalid || nameInput.invalid || telefoneInput.invalid"
+            type="submit" class="btn btn-success btn-lg btn-block" (click)="onCreatePost()"
+            data-dismiss="modal">Submeter dados</button>
+        </div>
+      </div>
+
+      <!-- Modal footer
         <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
         </div>
         -->
-      </div>
     </div>
   </div>
-
-
-
-
+</div>

@@ -83,20 +83,20 @@
   border-color: #000;
 }
 
-/* formatar pesquisa quarto */
-.list-group-item-text {
-  text-align: justify;
-}
 
 
 /* submeter dados*/
+
+.mdbody {
+  background-color: rgba(0,0,0,.03);
+}
 
 .help.is-error {
   color: red;
   background-color: white;
 }
 
-.input.ng-invalid.ng-dirty {
+input.ng-invalid.ng-dirty {
   border-color: red;
 }
 
@@ -104,11 +104,6 @@
   border-color: green;
 }
 
-.textarea:focus, input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus {
-  border-color: none;
-  box-shadow: none;
-  outline: none;
-}
 .modal-footer {
   margin: 20px;
   text-align: center;
